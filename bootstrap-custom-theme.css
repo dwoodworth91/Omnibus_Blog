@@ -1,0 +1,51 @@
+body .navbar{
+	border-radius: 0;
+	font-weight: bold;
+	border-bottom: 1px solid rgba(1,1,1,0.15);
+	border-top: 1px solid rgba(1,1,1,0.15);
+	color: #143656;
+	background: white;
+}
+body .navbar li{
+	border-left: 1px solid rgba(1,1,1,0.15);
+	
+}
+@media (max-width: 767px) {
+	body .navbar li{
+		padding-left: 0.5em;
+	}
+}
+body .navbar-toggle .icon-bar{
+	background-color: #143656;
+}
+body ul.nav{
+	border-right: 1px solid rgba(1,1,1,0.15);
+}
+body .navbar a, .navbar a:hover, .navbar a:focus{
+	color: inherit;
+}
+body .panel, body .panel-heading, body .panel-footer{
+	border-radius: 0;
+}
+body .panel{
+	border: 1px solid rgba(1,1,1,0.15);
+}
+body .panel-heading{
+	font-weight: bold;
+	position: relative;
+	border-bottom: 1px solid rgba(1,1,1,0.15);
+}
+body .panel-heading, .alert-message .panel-body{
+	border-left: 0.4em solid #143656;
+}
+body .panel-heading a, body footer>div a, body footer>div a:hover{
+	color: #143656;
+}
+body .panel-body{
+	padding: 5px;
+}
+body .panel-footer{
+	position: relative;
+	bottom: 0;
+	background: transparent;
+}

@@ -1,0 +1,54 @@
+/*Special Logo Font*/
+@font-face {
+    font-family: 'existence-light';
+    src: url('fonts/Existence-Light/Existence-Light.otf') format('opentype')
+}
+
+/*Universal Logo Styles*/
+.logo{
+	display: inline-block;
+	font-family: 'existence-light', sans-serif;
+	border-top: 0.05em solid white;
+	border-bottom: 0.05em solid white;
+}
+.logo h1{
+	padding-left: 0;
+	margin: 0;
+	text-transform: uppercase;
+	line-height: 0.95em;
+	font-size: 100%;
+}
+.logo .logo-bottom-word{
+	font-size: 104%;
+}
+
+/*For when logo apears small on white background*/
+.navbar-brand .logo, .navbar-header .logo{
+	border-color: #143656;
+	border-width: 0.1em;
+	padding-top: 0.1em;
+}
+
+/*For logo to appear in the navbar when it is affixed:*/
+/*1) In the brand area in desktop mode*/
+/*2) In the navbar header in mobile mode*/
+.navbar.affix-top .navbar-brand{
+	display: none;
+}
+@media (max-width: 767px){
+	.navbar-brand{
+		display: none;
+	}
+}
+.navbar-header .logo{
+	margin-top: 0.8em;
+	margin-left: 1.5em;
+}
+@media (min-width: 768px){
+	.navbar-header .logo{
+		display: none;
+	}
+}
+body:not(.nav-is-affixed) .navbar-header .logo{
+	display: none;
+}

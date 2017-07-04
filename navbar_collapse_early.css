@@ -1,0 +1,26 @@
+@media (max-width: 991px) {
+    body .navbar-header {
+        float: none;
+    }
+    body .navbar-toggle {
+        display: block;
+    }
+    body .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    body .navbar-collapse.collapse {
+        display: none!important;
+    }
+    body .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    body .navbar-nav>li {
+        float: none;
+    }
+    body .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}

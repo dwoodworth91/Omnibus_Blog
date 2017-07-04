@@ -1,0 +1,316 @@
+/*
+Theme Name: Omnibus_Blog_Concept
+Description: Culture War Blog of Blogs
+Version: 1
+Author: David Woodworth
+*/
+#banner-background{
+	background: -webkit-linear-gradient(#143656, #405C76); /* Safari 5.1-6.0 */
+	background: -o-linear-gradient(#143656, #405C76); /* For Opera 11.6-12.0 */
+	background: -moz-linear-gradient(#143656, #405C76); /* For Firefox 3.6-15 */
+	background: linear-gradient(#143656, #405C76); /* Standard syntax */
+}
+.navbar.affix{
+	z-index: 1;
+	top: 0;
+	width: 100%;
+}
+@media (min-width: 783px){
+	html body.customize-support .navbar.affix{
+		top: 32px;
+	}
+}
+@media (min-width: 601px){
+	body.customize-support .navbar.affix{
+		top: 46px;
+	}
+}
+
+#banner h1, #banner h4{
+	color: white;
+}
+.banner-logo-container{
+	margin-top: 0.4em;
+	text-align: center;
+	font-size: 350%;
+}
+/*#banner div{
+	border: 1px solid white;
+	display: inline-block;
+}*/
+.panel-heading, nav{
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+.panel-heading{
+	font-size: 120%;
+}
+#banner h4, span.post-title, .post-meta{
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+span.post-title{
+	font-size: 44px;
+	margin-right: 0.12em
+}
+hr.title-content-separator{
+	margin-top: initial;
+	margin-bottom: 15px;
+}
+.post-meta{
+	display: inline-block;
+	padding-left: 1em;
+	margin-left: 0.3em;
+	margin-bottom: 10px;
+	border-left: 1px solid rgba(1,1,1,0.25);
+}
+h4.post-date, h4.post-author{
+	margin-top: 0;
+	margin-bottom: 0;
+	display: block;
+}
+a.post-tile-link{
+	color: #143656;
+}
+a.post-tile-link:hover,
+a.post-tile-link:active,
+a.post-tile-link:focus
+{
+	text-decoration: initial;
+}
+a.post-tile-link .post-tile{
+	color: initial;
+}
+a:hover.post-tile-link .panel-heading{
+	/*text-decoration: underline;*/
+}
+
+#menu-main-menu .current-menu-item>a:after{
+	width: 100%;
+	height: 0.4em;
+	background: #143656;
+	content: " ";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+#main-menu a.navbar-brand{
+	padding: 6px 0.5em;
+}
+@media (max-width: 991px) {
+	#main-menu.navbar .container{
+		padding-right: initial;
+		padding-left: initial;
+	}
+}
+
+.archive .spinner{
+	margin-top: 5px;
+    margin-bottom: 5px;
+	display: none;
+}
+.archive h4{
+	display: inline;
+	font-weight: bold;
+	line-height: 1.6em;
+}
+.archive .item-archive h4{
+	display: block;
+	font-weight: normal;
+}
+.archive li{
+	list-style: none;
+	cursor: pointer;
+}
+.archive li.item-archive{
+	border-top: 1px solid rgba(1,1,1,0.15);
+	margin: 0;
+}
+.archive li.item-archive:hover{
+	background-color: #eee;
+}
+.archive li.item-archive a{
+	display: inline-block;
+	padding-left: 0.5em;
+	width: 100%;
+}
+.archive li.item-archive a:hover{
+	text-decoration: none;
+}
+.archive ul{
+	padding-left: 8px;
+}
+.archive ul.dropdown-menu{
+	padding-right: 15px;
+	min-width: 20em;
+	overflow-y: auto;
+}
+	
+body .navbar .archive li{
+	border-left: none;
+}
+
+body.nav-is-affixed #posts{
+	margin-top: 70px;
+}
+.post-tile{
+	height: initial;
+	position: relative;
+	overflow: hidden;
+}
+@media only screen and (max-width : 767px){.post-tile{
+	min-height: 20em;
+	max-height: 45em;
+}}
+@media only screen and (min-width : 768px){.post-tile{height: 24em}}
+@media only screen and (min-width : 824px){.post-tile{height: 26em}}/*smoother*/
+@media only screen and (min-width : 880px){.post-tile{height: 28em}}/*smoother*/
+@media only screen and (min-width : 936px){.post-tile{height: 29em}}/*smoother*/
+@media only screen and (min-width : 963px){.post-tile{height: 29.5em}}/*smoother*/
+@media only screen and (min-width : 992px){.post-tile{height: 17em}}
+@media only screen and (min-width : 1044px){.post-tile{height: 18.5em}}/*smoother*/
+@media only screen and (min-width : 1096px){.post-tile{height: 18.5em}}/*smoother*/
+@media only screen and (min-width : 1148px){.post-tile{height: 19.25em}}/*smoother*/
+@media only screen and (min-width : 1160px){.post-tile{height: 19.75em}}/*smoother*/
+@media only screen and (min-width : 1200px){.post-tile{height: 17em}}
+@media only screen and (min-width : 1250px){.post-tile{height: 17.5em}}
+@media only screen and (min-width : 1300px){.post-tile{height: 18em}}
+@media only screen and (min-width : 1350px){.post-tile{height: 19em}}
+@media only screen and (min-width : 1400px){.post-tile{height: 19.5em}}
+@media only screen and (min-width : 1450px){.post-tile{height: 20em}}
+@media only screen and (min-width : 1500px){.post-tile{height: 20.5em}}
+@media only screen and (min-width : 1550px){.post-tile{height: 21em}}
+@media only screen and (min-width : 1600px){.post-tile{height: 21.5em}}
+@media only screen and (min-width : 1650px){.post-tile{height: 22em}}
+@media only screen and (min-width : 1700px){.post-tile{height: 22.5em}}
+@media only screen and (min-width : 1750px){.post-tile{height: 24em}}
+@media only screen and (min-width : 1800px){.post-tile{height: 24.5em}}
+@media only screen and (min-width : 1850px){.post-tile{height: 25em}}
+@media only screen and (min-width : 1900px){.post-tile{height: 25.5em}}
+@media only screen and (min-width : 1950px){.post-tile{height: 26em}}
+@media only screen and (min-width : 2000px){.post-tile{height: 26.5em}}
+@media only screen and (min-width : 2050px){.post-tile{height: 27.5em}}
+@media only screen and (min-width : 2100px){.post-tile{height: 28em}}
+.post-tile-body p, .post-content{
+	/*word-wrap: break-word;*/
+	/*word-break: break-all;*/
+}
+.post-tile-body p{
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+body blockquote{
+    border-color: #143656;
+}
+.post-content{
+	margin-top: 0.5em;
+	font-size: 17px;
+}
+.post-content .wp-caption, .post-content img{
+	clear: both;
+}
+.post-content .wp-caption.aligncenter,
+.post-content .wp-caption.alignleft,
+.post-content .wp-caption.alignright{
+	text-align: center;
+}
+.post-content img.aligncenter, 
+.post-content .wp-caption.aligncenter,
+.post-content img.alignleft,
+.post-content .wp-caption.alignleft,
+.post-content img.alignright,
+.post-content .wp-caption.alignright{
+	display: block;
+	margin: 0 auto;
+}
+@media only screen and (min-width : 500px){
+	.post-content img.alignleft,
+	.post-content .wp-caption.alignleft{
+		float: left;
+		margin-left: 0;
+		padding-right: 0.7em;
+	}
+	.post-content img.alignright,
+	.post-content .wp-caption.alignright{
+		float: right;
+		margin-right: 0;
+		padding-left: 0.7em;
+	}
+}
+span.drop-case {
+    color: #143656;
+    font-size: 350%;
+    float: left;
+    line-height: 1em;
+    font-family: "Courier New", Courier, monospace;
+    margin-bottom: -0.2em;
+    margin-right: 0.06em;
+	margin-top: -0.04em;
+	text-transform: uppercase;
+}
+
+.profile-image {
+    width: 15em;
+    float: left;
+    margin-right: 1em;
+}
+
+.post-tile-footer{
+	width: 100%;
+	font-size: 90%;
+	position: absolute;
+	bottom: 0;
+	padding: 0.4em;
+	background: inherit;
+	text-align: right;
+	border-top: 1px solid rgba(1,1,1,0.15);
+}
+.post-tile-footer:before{
+	position: absolute;
+    top: -6px;
+    left: 0;
+    content: " ";
+	background: white;
+    height: 5px;
+    width: 100%;
+}
+
+footer>div{
+	border-top: 1px solid rgba(1,1,1,0.15);
+	padding-top: 1em;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+}
+
+.footer-menu{
+	list-style-type: none;
+    padding: 0;
+}
+.footer-menu li{
+	display: inline;
+}
+.footer-menu li a{
+	padding: 0 1em;
+	border-left: 1px solid rgba(1,1,1,0.25);
+}
+.footer-menu li:first-child a{
+	padding-left: 0;
+	border-left: none;
+}
+
+#noMorePosts{
+	margin: 30px auto;
+}
+
+/*WordPress Classes*/
+.attachment-post-thumbnail{
+	width: 100%;
+	height: auto;
+}
+
+.whisper{
+	color: #B4B4B4;
+}
