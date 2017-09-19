@@ -10,13 +10,13 @@ function fetchNewPosts(){
 	$.ajax({
 		url: model.admin_ajax_url,
 		type:'POST',
-		data: formQueryString(), 
+		data: formQueryString(),
 		success: function(respObj){
 			if(respObj) model.pageNumber++;
 		},
 		complete: function(resp){
 			setDisplayLoading(false);
-			addNewPosts(resp.responseJSON);
+			posts.append(resp.responseJSON);
 			if(!gethasMorePosts()){
 				noMorePostsMsg.css("display", "");
 			}
@@ -28,15 +28,6 @@ function formQueryString(){
 	if(model.queryString) model.queryString = "&" + model.queryString;
 	return "action=" + model.infinite_tiles_action + "&paged="+ model.pageNumber + model.queryString;
 };
-
-function addNewPosts(respObj){
-	posts.append(respObj.markup);
-	respObj.postIds.forEach(function(postId){
-		var theContent = document.getElementById("back-"+postId).innerHTML;
-		document.getElementById("front-"+postId).innerHTML += theContent;
-		document.getElementById("spacer-"+postId).innerHTML += theContent;
-	});
-}
 
 function fetchNewPostsIfAllowed(ignoreScrollPosition){
 	var hasMorePosts = gethasMorePosts();
@@ -64,7 +55,7 @@ $(document).ready(function(){
 	postsLoadingIndicator = $("#postsLoadingIndicator").hide(0);
 	postsLoadingIndicator.show = function(){postsLoadingIndicator.css("display", "")}
 	noMorePostsMsg = $("#noMorePostsMsg");
-	
+
 	$(window).scroll(function(){
 		fetchNewPostsIfAllowed();
 	});

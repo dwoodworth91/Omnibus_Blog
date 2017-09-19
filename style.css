@@ -4,6 +4,9 @@ Description: Culture War Blog of Blogs
 Version: 1
 Author: David Woodworth
 */
+html > body.cards-background {
+	background-color: #EEEEEE;
+}
 #banner-background{
 	background: -webkit-linear-gradient(#143656, #405C76); /* Safari 5.1-6.0 */
 	background: -o-linear-gradient(#143656, #405C76); /* For Opera 11.6-12.0 */
@@ -34,22 +37,27 @@ Author: David Woodworth
 	text-align: center;
 	font-size: 350%;
 }
-/*#banner div{
-	border: 1px solid white;
-	display: inline-block;
-}*/
-.panel-heading, nav{
+.cards-background {
+	padding-top: 20px;
+}
+
+.panel-heading, nav,
+#banner h4, span.post-title, .post-meta, .card-title{
 	font-family: 'Open Sans Condensed', sans-serif;
 }
 .panel-heading{
 	font-size: 120%;
 }
-#banner h4, span.post-title, .post-meta{
-	font-family: 'Open Sans Condensed', sans-serif;
+span.post-title:before{
+	content: "";
+	display: block;
+	height: 0.3em;
+	width: 100%;
+	margin: 0;
 }
 span.post-title{
 	font-size: 44px;
-	margin-right: 0.12em
+	line-height: 1.2em;
 }
 hr.title-content-separator{
 	margin-top: initial;
@@ -67,21 +75,6 @@ h4.post-date, h4.post-author{
 	margin-bottom: 0;
 	display: block;
 }
-a.post-tile-link{
-	color: #143656;
-}
-a.post-tile-link:hover,
-a.post-tile-link:active,
-a.post-tile-link:focus
-{
-	text-decoration: initial;
-}
-a.post-tile-link .post-tile{
-	color: initial;
-}
-a:hover.post-tile-link .panel-heading{
-	/*text-decoration: underline;*/
-}
 
 #menu-main-menu .current-menu-item>a:after{
 	width: 100%;
@@ -91,6 +84,9 @@ a:hover.post-tile-link .panel-heading{
 	position: absolute;
 	bottom: 0;
 	left: 0;
+}
+#main-menu.navbar{
+	margin-bottom: 0;
 }
 #main-menu a.navbar-brand{
 	padding: 6px 0.5em;
@@ -143,55 +139,13 @@ a:hover.post-tile-link .panel-heading{
 	min-width: 20em;
 	overflow-y: auto;
 }
-	
+
 body .navbar .archive li{
 	border-left: none;
 }
 
 body.nav-is-affixed #posts{
 	margin-top: 70px;
-}
-.post-tile{
-	height: initial;
-	position: relative;
-	overflow: hidden;
-}
-@media only screen and (max-width : 767px){.post-tile{
-	min-height: 20em;
-	max-height: 45em;
-}}
-@media only screen and (min-width : 768px){.post-tile{height: 24em}}
-@media only screen and (min-width : 824px){.post-tile{height: 26em}}/*smoother*/
-@media only screen and (min-width : 880px){.post-tile{height: 28em}}/*smoother*/
-@media only screen and (min-width : 936px){.post-tile{height: 29em}}/*smoother*/
-@media only screen and (min-width : 963px){.post-tile{height: 29.5em}}/*smoother*/
-@media only screen and (min-width : 992px){.post-tile{height: 17em}}
-@media only screen and (min-width : 1044px){.post-tile{height: 18.5em}}/*smoother*/
-@media only screen and (min-width : 1096px){.post-tile{height: 18.5em}}/*smoother*/
-@media only screen and (min-width : 1148px){.post-tile{height: 19.25em}}/*smoother*/
-@media only screen and (min-width : 1160px){.post-tile{height: 19.75em}}/*smoother*/
-@media only screen and (min-width : 1200px){.post-tile{height: 17em}}
-@media only screen and (min-width : 1250px){.post-tile{height: 17.5em}}
-@media only screen and (min-width : 1300px){.post-tile{height: 18em}}
-@media only screen and (min-width : 1350px){.post-tile{height: 19em}}
-@media only screen and (min-width : 1400px){.post-tile{height: 19.5em}}
-@media only screen and (min-width : 1450px){.post-tile{height: 20em}}
-@media only screen and (min-width : 1500px){.post-tile{height: 20.5em}}
-@media only screen and (min-width : 1550px){.post-tile{height: 21em}}
-@media only screen and (min-width : 1600px){.post-tile{height: 21.5em}}
-@media only screen and (min-width : 1650px){.post-tile{height: 22em}}
-@media only screen and (min-width : 1700px){.post-tile{height: 22.5em}}
-@media only screen and (min-width : 1750px){.post-tile{height: 24em}}
-@media only screen and (min-width : 1800px){.post-tile{height: 24.5em}}
-@media only screen and (min-width : 1850px){.post-tile{height: 25em}}
-@media only screen and (min-width : 1900px){.post-tile{height: 25.5em}}
-@media only screen and (min-width : 1950px){.post-tile{height: 26em}}
-@media only screen and (min-width : 2000px){.post-tile{height: 26.5em}}
-@media only screen and (min-width : 2050px){.post-tile{height: 27.5em}}
-@media only screen and (min-width : 2100px){.post-tile{height: 28em}}
-.post-tile-body p, .post-content{
-	/*word-wrap: break-word;*/
-	/*word-break: break-all;*/
 }
 .post-tile-body p{
 	-ms-word-break: break-all;
@@ -203,7 +157,7 @@ body.nav-is-affixed #posts{
 	hyphens: auto;
 }
 body blockquote{
-    border-color: #143656;
+  border-color: #143656;
 }
 .post-content{
 	margin-top: 0.5em;
@@ -217,7 +171,7 @@ body blockquote{
 .post-content .wp-caption.alignright{
 	text-align: center;
 }
-.post-content img.aligncenter, 
+.post-content img.aligncenter,
 .post-content .wp-caption.aligncenter,
 .post-content img.alignleft,
 .post-content .wp-caption.alignleft,
@@ -258,26 +212,6 @@ span.drop-case {
     margin-right: 1em;
 }
 
-.post-tile-footer{
-	width: 100%;
-	font-size: 90%;
-	position: absolute;
-	bottom: 0;
-	padding: 0.4em;
-	background: inherit;
-	text-align: right;
-	border-top: 1px solid rgba(1,1,1,0.15);
-}
-.post-tile-footer:before{
-	position: absolute;
-    top: -6px;
-    left: 0;
-    content: " ";
-	background: white;
-    height: 5px;
-    width: 100%;
-}
-
 footer>div{
 	border-top: 1px solid rgba(1,1,1,0.15);
 	padding-top: 1em;
@@ -313,4 +247,43 @@ footer>div{
 
 .whisper{
 	color: #B4B4B4;
+}
+
+/*Column Cards Stuff*/
+.cards{
+	column-width: 300px;
+	column-count: 4;
+	column-gap: 25px;
+	margin-bottom: 1em;
+}
+.card{
+	margin: 0  0 1em 0;
+	break-inside: avoid;
+	background: white;
+	border-radius: 2px;
+}
+.card, #main-menu.navbar {
+	box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 0 1px 2px rgba(0,0,0, 0.24);
+}
+.card, .card img{
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+h2.card-title {
+	margin-top: 10px;
+}
+.card-title a {
+	color: black;
+	font-weight: bold;
+}
+.card-title a:hover,
+.card-title a:focus {
+	text-decoration: none;
+	color: #143656;
+}
+.card .post-meta {
+	margin-bottom: 4px;
+}
+.card-text{
+	padding: 1px 10px 10px;
 }
