@@ -5,7 +5,7 @@
 		<title><?php bloginfo('name'); ?></title>
 		<?php wp_head(); ?>
 	</head>
-	<body>
+	<body class="<?php echo is_singular() ? '' : 'cards-background' ?>">
 		<div class="page-row page-row-expanded">
 			<div class="container-fluid" id="banner-background">
 				<div class="row">
