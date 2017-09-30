@@ -4,7 +4,7 @@
 ?>
 
 <?php get_header(); ?>
-			<div class="cards-background container-fluid">
+			<div class="cards-area container-fluid">
 				<div class="row">
 					<div class="col-lg-1 col-md-0"></div>
 					<div class="col-md-12 col-lg-10">

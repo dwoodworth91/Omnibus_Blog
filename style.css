@@ -37,7 +37,7 @@ html > body.cards-background {
 	text-align: center;
 	font-size: 350%;
 }
-.cards-background {
+.cards-area {
 	padding-top: 20px;
 }
 
@@ -252,13 +252,23 @@ footer>div{
 /*Column Cards Stuff*/
 .cards{
 	column-width: 300px;
+	-moz-column-width: 300px;
+	-webkit-column-width: 300px;
 	column-count: 4;
+	-moz-column-count: 4;
+	-webkit-column-count: 4;
 	column-gap: 25px;
+	-moz-column-gap: 25px;
+	-webkit-column-gap: 25px;
 	margin-bottom: 1em;
+	-moz-margin-bottom: 1em;
+	-webkit-margin-bottom: 1em;
 }
 .card{
 	margin: 0  0 1em 0;
 	break-inside: avoid;
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
 	background: white;
 	border-radius: 2px;
 }
