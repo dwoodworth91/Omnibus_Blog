@@ -141,6 +141,16 @@
 	}
 	add_filter('the_content','addDropCase');
 
+	/*Utils*/
+	function the_author_public_profile_img($size){
+		the_author_public_profile_img_with_classes($size, array());
+	}
+
+	function the_author_public_profile_img_with_classes($size, $classes){
+		if(function_exists('get_cupp_meta') && $thumbnail = get_cupp_meta(get_the_author_meta('ID'), $size)){
+			echo "<img src='" . $thumbnail . "' alt='Author Photo' class='profile-image " . join(' ', $classes) . "'>";
+		}
+	}
 
 	/*Theme Options*/
 	add_theme_support( 'post-thumbnails' );

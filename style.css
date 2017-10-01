@@ -42,20 +42,20 @@ html > body.cards-background {
 }
 
 .panel-heading, nav,
-#banner h4, span.post-title, .post-meta, .card-title{
+#banner h4, .post-title, .post-meta {
 	font-family: 'Open Sans Condensed', sans-serif;
 }
 .panel-heading{
 	font-size: 120%;
 }
-span.post-title:before{
+.post-title:before{
 	content: "";
 	display: block;
 	height: 0.3em;
 	width: 100%;
 	margin: 0;
 }
-span.post-title{
+.post-title{
 	font-size: 44px;
 	line-height: 1.2em;
 }
@@ -206,7 +206,7 @@ span.drop-case {
 	text-transform: uppercase;
 }
 
-.profile-image {
+.author-about .profile-image {
     width: 15em;
     float: left;
     margin-right: 1em;
@@ -275,12 +275,26 @@ footer>div{
 .card, #main-menu.navbar {
 	box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 0 1px 2px rgba(0,0,0, 0.24);
 }
-.card, .card img{
+.card, .card img.attachment-post-thumbnail{
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 }
-h2.card-title {
-	margin-top: 10px;
+.card .card-featured-image-wrapper {
+	position: relative;
+}
+.card .profile-image {
+	object-fit: cover;
+	position: relative;
+	margin-left: 15px;
+	margin-top: -35px;
+	height: 60px;
+	width: 60px;
+	box-shadow: 0 2px 4px rgba(0,0,0, 0.12), 0 2px 4px rgba(0,0,0, 0.24);
+}
+.post-title.card-title {
+	line-height: 1em;
+	vertical-align: 30%;
+	font-size: 30px;
 }
 .card-title a {
 	color: black;
@@ -291,9 +305,6 @@ h2.card-title {
 	text-decoration: none;
 	color: #143656;
 }
-.card .post-meta {
-	margin-bottom: 4px;
-}
-.card-text{
+.card-text {
 	padding: 1px 10px 10px;
 }

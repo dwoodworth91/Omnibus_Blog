@@ -18,18 +18,23 @@
 			$isLastCol = ($colIndex == $COLUMN_COUNT -1) || ($index + 1 == $resultCount);
 		?>
 			<div class="card">
-				<?php if ( has_post_thumbnail() ): ?>
-				<?php the_post_thumbnail(); ?>
-				<?php endif; ?>
+				<div class="card-featured-image-wrapper">
+					<?php if ( $the_post_thumbnail = get_the_post_thumbnail()): ?>
+						<?php echo $the_post_thumbnail; ?>
+						<?php the_author_public_profile_img_with_classes('small', array('img-circle')); ?>
+					<?php endif; ?>
+				</div>
 				<div class="card-text">
-					<!-- <?php the_permalink() ?> -->
-					<h4>
-						<h2 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title()?></a></h2>
-					</h4>
+					<span class='post-title card-title'>
+						<a href="<?php the_permalink() ?>">
+							<?php the_title()?>
+						</a>
+					</span>
 					<div class='post-meta'>
 						<h4 class='whisper post-author'><?php the_author() ?></h4>
-						<h4 class='whisper post-date'><?php the_date() ?></h4>
+						<h4 class='whisper post-date'><?php echo get_the_date() ?></h4>
 					</div>
+					<div class="clearfix"></div>
 					<?php echo apply_filters('the_content', wp_trim_words( get_the_content(), $PREVIEW_LENGTH, '...' )); ?>
 				</div>
 			</div>
