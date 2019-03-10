@@ -7,8 +7,6 @@
 	
 	$serverYear = date('Y');
 	$serverMonth = date('F');
-	
-	query_posts('showposts=-1'); 
 ?>
 <ul class="dropdown-menu" id="archive-list">
 	<?php if (have_posts()): while (have_posts()): the_post();
@@ -68,5 +66,4 @@
 		echo "<li class='item-archive'><a href='".get_the_permalink()."'><h4>".get_the_title()."</h4></a></li>";
 
 	endwhile; echo "</ul></li></ul></li>"; endif; ?>
-	<?php wp_reset_query(); ?>
 </ul>
