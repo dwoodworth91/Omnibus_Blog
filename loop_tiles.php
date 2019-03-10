@@ -17,25 +17,27 @@
 			$colIndex = $index % $COLUMN_COUNT;
 			$isLastCol = ($colIndex == $COLUMN_COUNT -1) || ($index + 1 == $resultCount);
 		?>
-			<div class="card">
-				<div class="card-featured-image-wrapper">
-					<?php if ( $the_post_thumbnail = get_the_post_thumbnail()): ?>
-						<?php echo $the_post_thumbnail; ?>
-						<?php the_author_public_profile_img_with_classes('small', array('img-circle')); ?>
-					<?php endif; ?>
-				</div>
-				<div class="card-text">
-					<span class='post-title card-title'>
-						<a href="<?php the_permalink() ?>">
-							<?php the_title()?>
-						</a>
-					</span>
-					<div class='post-meta'>
-						<h4 class='whisper post-author'><?php the_author() ?></h4>
-						<h4 class='whisper post-date'><?php echo get_the_date() ?></h4>
+			<div class="card-faux-margin-wrapper">
+				<div class="card">
+					<div class="card-featured-image-wrapper">
+						<?php if ( $the_post_thumbnail = get_the_post_thumbnail()): ?>
+							<?php echo $the_post_thumbnail; ?>
+							<?php the_author_public_profile_img_with_classes('small', array('img-circle')); ?>
+						<?php endif; ?>
 					</div>
-					<div class="clearfix"></div>
-					<?php echo apply_filters('the_content', wp_trim_words( get_the_content(), $PREVIEW_LENGTH, '...' )); ?>
+					<div class="card-text">
+						<span class='post-title card-title'>
+							<a href="<?php the_permalink() ?>">
+								<?php the_title()?>
+							</a>
+						</span>
+						<div class='post-meta'>
+							<h4 class='whisper post-author'><?php the_author() ?></h4>
+							<h4 class='whisper post-date'><?php echo get_the_date() ?></h4>
+						</div>
+						<div class="clearfix"></div>
+						<?php echo apply_filters('the_content', wp_trim_words( get_the_content(), $PREVIEW_LENGTH, '...' )); ?>
+					</div>
 				</div>
 			</div>
 	<?php endwhile;?>

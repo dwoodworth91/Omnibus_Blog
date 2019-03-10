@@ -26,9 +26,7 @@
 								</div>
 							<?php endif; ?>
 						<?php endif; ?>
-						<div class="cards" id="posts">
-
-						</div>
+						<div class="cards" id="posts"></div>
 						<?php get_template_part( 'loading_posts' ); ?>
 						<?php get_template_part( 'no_more_posts' ); ?>
 					</div>

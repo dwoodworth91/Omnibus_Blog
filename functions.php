@@ -22,9 +22,6 @@
 			global $wp_query;
 			global $query_string;
 
-			wp_register_script('infinite_scrolling', get_template_directory_uri().'/infinite_scrolling.js',false);
-			wp_enqueue_script('infinite_scrolling');
-
 			$model = array_merge($base_ajax_model, array(
 				'infinite_tiles_action' => TILES_ACTION_NAME,
 				'pageNumber' => '1',
@@ -32,6 +29,23 @@
 				'postsPerPage' => get_option('posts_per_page'),
 				'queryString' => $query_string
 			));
+
+			/*Libs not automatically enqueued*/
+			wp_register_script('lodash', get_template_directory_uri().'/libs/lodash-4.17.4/lodash.js',false);
+			wp_register_script('pubsub', get_template_directory_uri().'/libs/jquery-tiny-pubsub-0.7.0/ba-tiny-pubsub.min.js',false);
+			wp_localize_script( 'pubsub', 'events', array(
+				'CARDS_LOADED' => 'cards/loaded',
+				'CARDS_LOADED_IMAGES' => 'cards/loaded/images'
+			));
+			wp_register_script('images_loaded', get_template_directory_uri().'/libs/images-loaded-4.1.3/imagesloaded.pkgd.js',false);
+			wp_register_script('lib_masonry', get_template_directory_uri().'/libs/masonry-4.2.0/masonry.pkgd.min.js',false);
+
+			/*Theme scripts*/
+			wp_register_script('infinite_scrolling', get_template_directory_uri().'/infinite_scrolling.js', array('images_loaded', 'pubsub'));
+			wp_enqueue_script('infinite_scrolling');
+
+			wp_register_script('ombc_masonry', get_template_directory_uri().'/masonry.js', array('lib_masonry', 'lodash', 'pubsub'));
+			wp_enqueue_script('ombc_masonry');
 		}
 
 		wp_localize_script( 'scripts', 'model', $model );

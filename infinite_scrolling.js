@@ -16,12 +16,20 @@ function fetchNewPosts(){
 		},
 		complete: function(resp){
 			setDisplayLoading(false);
-			posts.append(resp.responseJSON);
+			publishLoadEvents($(resp.responseJSON).appendTo(posts));
 			if(!gethasMorePosts()){
 				noMorePostsMsg.css("display", "");
 			}
 		}
 	});
+}
+
+function publishLoadEvents(addedItems){
+	$.publish(events.CARDS_LOADED, [addedItems]);
+	posts.imagesLoaded()
+		.done(function(){
+			$.publish(events.CARDS_LOADED_IMAGES);
+		});
 }
 
 function formQueryString(){

@@ -5,23 +5,24 @@ body .navbar{
 	color: #143656;
 	background: white;
 }
-body .navbar li{
-	border-left: 1px solid rgba(1,1,1,0.15);
 
-}
 @media (max-width: 767px) {
 	body .navbar li{
 		padding-left: 0.5em;
 	}
 }
 body .navbar-toggle .icon-bar{
-	background-color: #143656;
-}
-body ul.nav{
-	border-right: 1px solid rgba(1,1,1,0.15);
+	background-color: white;
 }
 body .navbar a, .navbar a:hover, .navbar a:focus{
 	color: inherit;
+}
+body .nav>li>a:focus,
+body .nav>li>a:hover,
+body .nav .open>a,
+body .nav .open>a:focus,
+body .nav .open>a:hover{
+	background-color: #405C76;
 }
 body .panel, body .panel-heading, body .panel-footer{
 	border-radius: 0;
