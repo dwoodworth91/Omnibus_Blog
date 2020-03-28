@@ -22,7 +22,7 @@
 	font-size: 104%;
 }
 
-/*For when logo apears small on white background*/
+/*For when logo appears small on white background*/
 .navbar-brand .logo, .navbar-header .logo{
 	border-color: #143656;
 	border-width: 0.1em;

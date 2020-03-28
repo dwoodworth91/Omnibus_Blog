@@ -86,9 +86,6 @@
 
 		wp_register_style(prefix('tile-hover'), get_template_directory_uri().'/hover.css', false);
 		wp_enqueue_style(prefix('tile-hover'));
-
-		wp_register_style(prefix('flip'), get_template_directory_uri().'/flip.css', false);
-		wp_enqueue_style(prefix('flip'));
 	}
 	add_action('wp_enqueue_scripts', 'add_front_end_CSS');
 

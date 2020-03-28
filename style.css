@@ -46,7 +46,10 @@ html > body.cards-background {
 	font-family: 'Open Sans Condensed', sans-serif;
 }
 .panel-heading{
-	font-size: 120%;
+	font-size: 140%;
+  font-weight: bolder;
+	border-bottom: 1px solid rgba(1,1,1,0.15);
+	color: #143656;
 }
 .post-title:before{
 	content: "";
@@ -310,18 +313,25 @@ footer>div{
 	width: 60px;
 	box-shadow: 0 2px 4px rgba(0,0,0, 0.12), 0 2px 4px rgba(0,0,0, 0.24);
 }
+.card a, .card a:hover, .card a:focus {
+	text-decoration: none;
+	color: black;
+}
+.card {
+	transition: all .2s ease-in-out;
+}
+.card:hover {
+	transform: scale(1.03);
+}
 .post-title.card-title {
 	line-height: 1em;
 	vertical-align: 30%;
 	font-size: 30px;
 }
-.card-title a {
-	color: black;
+.card-title {
 	font-weight: bold;
 }
-.card-title a:hover,
-.card-title a:focus {
-	text-decoration: none;
+.card a:hover .card-title {
 	color: #143656;
 }
 .card-text {
