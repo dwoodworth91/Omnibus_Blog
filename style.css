@@ -45,7 +45,7 @@ html > body.cards-background {
 .post-title, .post-meta {
 	font-family: 'Open Sans Condensed', sans-serif;
 }
-.panel-heading{
+.author-about .panel-heading{
 	font-size: 140%;
   font-weight: bolder;
 	border-bottom: 1px solid rgba(1,1,1,0.15);
@@ -321,7 +321,7 @@ footer>div{
 	transition: all .2s ease-in-out;
 }
 .card:hover {
-	transform: scale(1.03);
+	transform: scale(1.005);
 }
 .post-title.card-title {
 	line-height: 1em;
